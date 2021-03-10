@@ -1,0 +1,471 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;
+
+0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);@import url(https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap);@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Material+Icons);@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap);@charset "UTF-8";
+#homepage section.top {
+  position: relative;
+  height: 230px;
+  background-position: center;
+  background-size: cover;
+}
+
+#homepage section.top:before {
+  position: absolute;
+  content: "";
+  background-color: rgba(68, 189, 50, 0.8);
+  width: 100%;
+  height: 230px;
+}
+
+#homepage section.top.min {
+  height: auto !important;
+}
+
+#homepage section.top.min:before {
+  height: 56px;
+}
+
+#homepage section.top.min .md-title {
+  color: #FFF;
+  font-weight: bold;
+}
+
+#homepage section.top .title-section {
+  padding: 15px;
+  color: #FFF;
+  position: relative;
+  z-index: 1;
+}
+
+#homepage section.top .title-section h2 {
+  margin: 0;
+}
+
+#homepage section.top .logo {
+  z-index: 0;
+  width: 100%;
+  height: 120px;
+  background-size: contain;
+  background-position: right;
+  position: absolute;
+  background-repeat: no-repeat;
+  top: 50px;
+  right: 10px;
+}
+
+#homepage .md-icon.md-icon-font.md-theme-default {
+  color: #FFF;
+}
+
+#homepage .homepage-content {
+  position: relative;
+  padding: 15px;
+  margin: 15px;
+  margin-bottom: 25px;
+  margin-top: -50px;
+  background-color: #FFF;
+  border-radius: 1rem;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#homepage .homepage-content .service-item {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  text-align: center;
+  margin: 5px;
+  margin-bottom: 15px;
+}
+
+#homepage .homepage-content .service-item h4 {
+  margin: 0;
+}
+
+#homepage .footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 410px) {
+  .homepage-content {
+    display: block !important;
+  }
+}
+
+.login-content {
+  position: relative;
+  padding: 15px;
+  margin: 15px;
+  margin-bottom: 25px;
+  margin-top: -50px;
+  background-color: #FFF;
+  border-radius: 1rem;
+}
+
+.login-content form {
+  margin: auto;
+  max-width: 350px;
+}
+
+.login-content.min {
+  margin-top: 15px !important;
+}
+
+/**
+ * The complete material palette
+ * ---
+ * @access public
+ * @type map
+ * @group themes
+ */
+
+/**
+ * Theme any css property based on the current palette, accepting a themable
+ * value that will give an contrasted
+ * ---
+ * Usage example:
+ *
+ * $foo-palette: (
+ *   primary: md-get-palette-color(indigo, 500),
+ *   accent: md-get-palette-color(pink, 500),
+ *   theme: "light"
+ * );
+ *
+ * ---
+ * @access public
+ * ---
+ * @param {color} $type —  The desired color based on material palette
+ * @param {string} $type —  A valid hue
+ */
+
+/**
+ * Get the current theme mode from the current theme
+ * ---
+ * Usage example:
+ *
+ * $theme-mode: md-get-theme-mode()
+ *
+ * ---
+ * @access private
+ */
+
+/**
+ * Theme any css property based on the current palette, accepting a themable
+ * value that will give an contrasted
+ * ---
+ * Usage example:
+ *
+ * .md-foo {
+ *   min-width: 88px;
+ *   height: 40px;
+ *   background: md-theme(primary);
+ * }
+ *
+ * ---
+ * @access public
+ * ---
+ * @param {string} $type —  The themable value
+ */
+
+/**
+ * Get a color based on type by theme
+ * ---
+ * Usage example:
+ *
+ * $color: md-get-color-by-theme(dark, primary)
+ *
+ * ---
+ * @access public
+ * ---
+ * @param {string} $color-theme —  The theme color | Accepts dark or light
+ * @param {string} $type —  The color type
+ */
+
+/**
+ * Get a color based on type only
+ * ---
+ * Usage example:
+ *
+ * $color1: md-get-color-by-type(background, dark)
+ * $color1: md-get-color-by-type(accent)
+ *
+ * ---
+ * @access public
+ * ---
+ * @param {string} $type —  The color type
+ * @param {string} $theme —  The fallback theme
+ */
+
+/**
+ * The default theme palette
+ * primary: indigo 500 #3f51b5
+ * accent: pink 500 #e91e63
+ * theme: light
+ *
+ * It can be used just before importing the Vue Material stylesheet
+ *
+ * ---
+ * @access public
+ * @type colormap
+ * @group themes
+ */
+
+/**
+ * Temporary variable to store all themable values
+ * ---
+ * @access private
+ * @type map
+ * @group themes
+ */
+
+/**
+ * Map variable to store all themes to be processed by each component
+ * ---
+ * @access private
+ * @type map
+ * @group themes
+ */
+
+/**
+ * Store the current theme name
+ * ---
+ * @access private
+ * @type string
+ * @group themes
+ */
+
+/**
+ * Store the newly registered theme name for comparison, used for checking just called md-register-theme's theme name
+ * ---
+ * @access private
+ * @type string
+ * @group themes
+ */
+
+/**
+ * The color contrast values
+ * ---
+ * @access private
+ * @type map
+ * @group themes
+ */
+
+/**
+ * Hightly based on: "Using Sass to automatically pick text colors"
+ * https://medium.com/dev-channel/using-sass-to-automatically-pick-text-colors-4ba7645d2796
+ */
+
+/**
+ * Precomputed linear color channel values, for use in contrast calculations.
+ * See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
+ * ---
+ *
+ *  Algorithm, for c in 0 to 255:
+ *  f(c) {
+ *    c = c / 255;
+ *    return c < 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+ *  }
+ *
+ *  This lookup table is needed since there is no `pow` in SASS.
+ *
+ * ---
+ * @access private
+ * @type Map
+ * @group themes
+ */
+
+/**
+ * Calculate the luminance for a color.
+ * ---
+ * @access private
+ * ---
+ * @param {string} $color —  The color to be analysed
+ */
+
+/**
+ * Calculate the contrast ratio between two colors.
+ * ---
+ * @access private
+ * ---
+ * @param {string} $bg —  The bg color
+ * @param {string} $fg —  The fg color to be compared
+ */
+
+/**
+ * Determine whether to use dark or light text on top of given color.
+ * Returns dark or light depending on the contrast ratio.
+ * ---
+ * @access private
+ * ---
+ * @param {string} $color —  The desired color to be compared
+ */
+
+/**
+ * Override extending the default palette giving new values. It will extend
+ * the default values of the palette if has a property missing.
+ * ---
+ * Usage example:
+ *
+ * @include md-override-palette ((
+ *   accent: blue,
+ *   theme: "dark"
+ * ))
+ *
+ * ---
+ * @access public
+ * @param {map} $palette —  The new palette
+ */
+
+/**
+ * Create a new theme based on a given palette. It will extend the default
+ * values of the palette if has a property missing.
+ * ---
+ * Usage example:
+ *
+ * @include md-register-theme("alternative", (
+ *   primary: #212121,
+ *   accent: #CDDC39,
+ *   theme: dark
+ * ));
+ *
+ * ---
+ * @access public
+ * @param {string} $name —  The theme name to be used with the Vue Material
+ * @param {map} $palette [$md-default-palette] —  The theme palette
+ */
+
+/**
+ * Theme pieces of a given scss code for all pre registered themes.
+ * ---
+ * Usage example:
+ *
+ * .md-button {
+ *   min-width: 88px;
+ *   height: 40px;
+ *   display: inline-block;
+ *   border-radius: 2px;
+ *   transition: .3s ease;
+ *
+ *   @include md-theme-component() {
+ *     background: md-theme(primary);
+ *     color: md-theme(text-primary);
+ *   }
+ *
+ *   &.md-accent {
+ *     @include md-theme-component() {
+ *       background: md-theme(accent);
+ *       color: md-theme(text-accent);
+ *     };
+ *   }
+ * }
+ */
+
+/**
+ * Theme pieces of a given scss code for all pre registered themes based on parent.
+ * ---
+ * Usage example:
+ *
+ * .md-foo {
+ *   @include md-theme-component-relative() {
+ *     @include md-theme-property(background, primary);
+ *   }
+ * }
+ */
+
+/**
+ * Theme a single css property
+ * ---
+ * Usage example:
+ *
+ * .md-button {
+ *   min-width: 88px;
+ *   height: 40px;
+ *   display: inline-block;
+ *   border-radius: 2px;
+ *   transition: .3s ease;
+ *
+ *   @include md-theme-component() {
+ *     @include md-theme-property(background, primary);
+ *     @include md-theme-property(color, text-primary, primary);
+ *   }
+ *
+ *   &.md-accent {
+ *     @include md-theme-component() {
+ *       @include md-theme-property(background, accent);
+ *       @include md-theme-property(color, text-primary, accent);
+ *     }
+ *   }
+ * }
+ *
+ * ---
+ * @access public
+ * @param {string} $property —  The css property
+ * @param {string} $type —  A palette type
+ * @param {string} $background —  The background color to analyse contrast
+ * @param {number} $opacity —  The opacity amount
+ */
+
+/**
+ * Theme a single css property darkening the color by a certain amount
+ * ---
+ * Usage example:
+ *
+ * .md-button {
+ *   min-width: 88px;
+ *   height: 40px;
+ *   display: inline-block;
+ *   border-radius: 2px;
+ *   transition: .3s ease;
+ *
+ *   @include md-theme-component() {
+ *     @include md-theme-property-darken(background, primary, background, 10%);
+ *     @include md-theme-property(color, text-primary, primary);
+ *   }
+ * }
+ *
+ * ---
+ * @access public
+ * @param {string} $property —  The css property
+ * @param {string} $type —  A palette type
+ * @param {string} $background —  The background color to analyse contrast
+ * @param {string} $darken —  The darken amount to apply to the color
+ */
+
+/**
+ * Theme a single css property by
+ * ---
+ * Usage example:
+ *
+ * .md-button {
+ *   min-width: 88px;
+ *   height: 40px;
+ *   display: inline-block;
+ *   border-radius: 2px;
+ *   transition: .3s ease;
+ *
+ *   @include md-theme-component() {
+ *     @include md-theme-property-by-hue(background, grey, 100, toolbar, background);
+ *     @include md-theme-property(color, text-primary, background);
+ *   }
+ * }
+ *
+ * ---
+ * @access public
+ * @param {string} $property —  The css property
+ * @param {string} $color —  A valid material palette color name
+ * @param {string} $hue —  The hue amount to get the hex color
+ * @param {string} $type —  The type of variable
+ * @param {string} $variant —  The type of constrasted variable
+ */
+
+body {
+  font-family: "Montserrat", sans-serif !important;
+  min-height: 100%;
+  background-color: rgba(197, 234, 181, 0.18);
+}
+
